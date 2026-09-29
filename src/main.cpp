@@ -2,6 +2,8 @@
 #include <optional>
 #include <vector>
 
+#include <cmath>
+
 #include <SFML/Graphics.hpp>
 
 const int WINDOW_WIDTH = 800;
