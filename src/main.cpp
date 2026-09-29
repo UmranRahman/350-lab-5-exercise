@@ -83,6 +83,7 @@ void render(sf::RenderWindow& window) {
         curve.append(sf::Vertex{p, sf::Color::Green});
     }
     window.draw(curve);
+
     for (const auto&p : pts){
         sf::CircleShape dot(5.0f);
         sf::Vector2f position(p);
@@ -109,11 +110,9 @@ void render(sf::RenderWindow& window) {
     
 
     Point2D slope = getSlope(pts, t);
-
+    //AI Assistant: Claude
+    rect.setRotation(sf::radians(std::atan2(slope.y, slope.x)));
     window.draw(rect);
-
-
-
 
     // ====== ====== ======
     // TODO: (Part 3) Draw control handles from point 1 to 2 and point 3 to 4.
